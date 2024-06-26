@@ -199,7 +199,7 @@ export default function Home() {
                                                 <div key={optionIndex} className="flex items-center mb-2">
                                                     <input
                                                         className="mr-2"
-                                                        type="checkbox"
+                                                        type="radio"
                                                         id={`${question.fieldName}-${optionIndex}`}
                                                         name={question.fieldName}
                                                         value={option}
@@ -218,7 +218,7 @@ export default function Home() {
                                                 <div key={optionIndex} className="flex items-center mb-2">
                                                     <input
                                                         className="mr-2"
-                                                        type="checkbox"
+                                                        type="radio"
                                                         id={`option-${index}-${optionIndex}`}
                                                         name={`question-${index}`}
                                                         value={option}
