@@ -121,10 +121,15 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-gradient-to-r from-orange-950 via-black to-orange-950 flex flex-col items-center justify-center text-white">
-            {loading && (
-                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-                 <div className="animate-spin rounded-full border-4 border-t-4 border-orange-500 h-12 w-12"></div>
-             </div>
+    {loading && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+            <div className="relative">
+                <div className="absolute inset-0 bg-gray-200 rounded-full"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="animate-spin rounded-full border-4 border-t-4 border-orange-500 h-12 w-12"></div>
+                </div>
+            </div>
+        </div>
             )}
             <div className="bg-orange-200 p-8 rounded-lg shadow-lg w-full max-w-lg">
                 <h1 className="text-3xl font-extrabold mb-6 text-center text-transparent bg-gradient-to-r from-orange-500 to-orange-900 bg-clip-text">
