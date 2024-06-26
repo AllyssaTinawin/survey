@@ -122,9 +122,9 @@ export default function Home() {
     return (
         <div className="min-h-screen bg-gradient-to-r from-orange-950 via-black to-orange-950 flex flex-col items-center justify-center text-white">
             {loading && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-                    <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-24 w-24 mb-4"></div>
-                </div>
+                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+                 <div className="animate-spin rounded-full border-4 border-t-4 border-orange-500 h-12 w-12"></div>
+             </div>
             )}
             <div className="bg-orange-200 p-8 rounded-lg shadow-lg w-full max-w-lg">
                 <h1 className="text-3xl font-extrabold mb-6 text-center text-transparent bg-gradient-to-r from-orange-500 to-orange-900 bg-clip-text">
@@ -136,7 +136,7 @@ export default function Home() {
 
                 {submitted ? (
                     <div className="text-center">
-                        <h2 className="text-2xl font-bold mb-4 text-orange-500 mt-10">You have already submitted the survey.</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-orange-500 mt-10">Thank you! You have already submitted the survey.</h2>
                     </div>
                 ) : (
                     <>
@@ -157,7 +157,7 @@ export default function Home() {
                         <form onSubmit={handleSubmit}>
                             <div className="mb-4">
                                 <label className="block text-black font-bold mb-2" htmlFor="name">
-                                    Name
+                                    Full Name 
                                 </label>
                                 <input
                                     className="w-full px-3 py-2 border border-gray-700 rounded-lg focus:outline-none focus:border-green-500 bg-white-800 text-black"
@@ -166,7 +166,7 @@ export default function Home() {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleInputChange}
-                                    placeholder="Enter your name"
+                                    placeholder="Enter your full name here"
                                     required
                                 />
                             </div>
@@ -181,7 +181,7 @@ export default function Home() {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleInputChange}
-                                    placeholder="Enter your email"
+                                    placeholder="Enter your email address"
                                     required
                                 />
                             </div>
@@ -228,12 +228,12 @@ export default function Home() {
                                     )}
                                 </div>
                             ))}
-                            <div className="flex justify-center">
+                            <div className="flex justify-right">
                                 <button
                                     className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700 focus:outline-none focus:bg-blue-700"
                                     type="submit"
                                 >
-                                    Submit
+                                    Submit Response
                                 </button>
                             </div>
                         </form>
@@ -243,13 +243,13 @@ export default function Home() {
             {showModal && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
                     <div className="bg-slate-200 p-8 rounded-lg shadow-lg w-full max-w-md">
-                        <h2 className="text-2xl font-bold mb-4 text-orange-500">Thank you for your response!</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-orange-500">Thank you for taking our survey!</h2>
                         <p className="text-black mb-4">Your survey response has been successfully submitted.</p>
                         <button
-                            className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700 focus:outline-none focus:bg-green-700"
+                            className="bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700 focus:outline-none focus:bg-red-700"
                             onClick={() => setShowModal(false)}
                         >
-                            Close
+                            X
                         </button>
                     </div>
                 </div>
