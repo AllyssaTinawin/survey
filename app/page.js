@@ -141,7 +141,7 @@ export default function Home() {
 
                 {submitted ? (
                     <div className="text-center">
-                        <h2 className="text-2xl font-bold mb-4 text-orange-500 mt-10">Thank you! You have already submitted the survey.</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-orange-500 mt-10">Thank you so much! You have already submitted the survey.</h2>
                     </div>
                 ) : (
                     <>
